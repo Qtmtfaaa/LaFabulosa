@@ -21,25 +21,22 @@ h1{
 }
 
 .form_retos{
+    box-sizing:initial;
     border-top: #000 solid 5px;
-    width: 50%;
-    height: 200px;
+    height: 300px;
     background-color: #04aacfba;
     background-image: linear-gradient(#0c596a, #04aacfba);
     padding: 10px 5px 10px 10px;
     border-radius: 10px;
     margin: 5px;
-}
-
-.input_submit{
-    margin-left: 77.5%;
-    margin-top: 5px;
-    letter-spacing: 2.5px;
+    aspect-ratio: 16/9;
 }
 
 .retos_input{
     background-color: #04aacf77;
     margin-top: 5%;
+    height: 25px;
+    width: 40%;
 }
 
 .slider_txt{
@@ -52,9 +49,9 @@ h1{
 
 .text_over_form{
     padding: 0%;
-    box-sizing: content-box;
+    box-sizing: border-box;
     border: #000a solid 3px;
-    font-size: large;
+    font-size: xx-large;
 }
 
 .divisor{
@@ -64,9 +61,16 @@ h1{
     margin: 30px auto;
 }
 
+#input_submit{
+    width: 70px;
+    margin-left: 77.5%;
+    margin-top: 20px;
+    letter-spacing: 2.5px;
+}
+
 #retos_descripción{
-    width: 93%;
-    height: 20px;
+    width: 90%;
+    height: 30px;
 }
 
 #retos_slider{
@@ -76,5 +80,7 @@ h1{
 }
 
 ::placeholder{
+    padding-left: 7.5px;
     color: #0009;
+    font-size: large;
 }
