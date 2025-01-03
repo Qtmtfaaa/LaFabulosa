@@ -17,12 +17,13 @@ h1{
     text-align: center;
     color: #04aacf;
     text-decoration:wavy underline #04aacf;
-    font-size: 35px;
+    font-size: 55px;
 }
 
 .form_retos{
     border-top: #000 solid 5px;
     width: 50%;
+    height: 200px;
     background-color: #04aacfba;
     background-image: linear-gradient(#0c596a, #04aacfba);
     padding: 10px 5px 10px 10px;
@@ -38,12 +39,12 @@ h1{
 
 .retos_input{
     background-color: #04aacf77;
-
+    margin-top: 5%;
 }
 
 .slider_txt{
     padding-bottom: 0%;
-    margin: 5px 0 0 0;
+    margin: 20px 0 0 0;
     letter-spacing: 3px;
     font-family: "Eater", "Decide_Remain";
     font-size: small;
@@ -53,6 +54,7 @@ h1{
     padding: 0%;
     box-sizing: content-box;
     border: #000a solid 3px;
+    font-size: large;
 }
 
 .divisor{
@@ -68,6 +70,7 @@ h1{
 }
 
 #retos_slider{
+    margin-top: 0;
     width: 95%;
     range: infinite;
 }
