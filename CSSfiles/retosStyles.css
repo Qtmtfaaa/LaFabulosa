@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "Eater";
+    src: url(../Fonts/Eater/Eater-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Decide_Remain";
+    src: url(../Fonts/deicide-remain/Deicide\ Remain.otf);
+}
+
+body{
+    margin: 10px 30px;
+    background-color: #4355f3;
+}
+
+h1{
+    text-align: center;
+    color: #04aacf;
+    text-decoration:wavy underline #04aacf;
+    font-size: 35px;
+}
+
+.form_retos{
+    border-top: #000 solid 5px;
+    width: 50%;
+    background-color: #04aacfba;
+    background-image: linear-gradient(#0c596a, #04aacfba);
+    padding: 10px 5px 10px 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.input_submit{
+    margin-left: 77.5%;
+    margin-top: 5px;
+    letter-spacing: 2.5px;
+}
+
+.retos_input{
+    background-color: #04aacf77;
+
+}
+
+.slider_txt{
+    padding-bottom: 0%;
+    margin: 5px 0 0 0;
+    letter-spacing: 3px;
+    font-family: "Eater", "Decide_Remain";
+    font-size: small;
+}
+
+.text_over_form{
+    padding: 0%;
+    box-sizing: content-box;
+    border: #000a solid 3px;
+}
+
+.divisor{
+    height: 5px;
+    width: 100%;
+    background-color: #04aacf;
+    margin: 30px auto;
+}
+
+#retos_descripción{
+    width: 93%;
+    height: 20px;
+}
+
+#retos_slider{
+    width: 95%;
+    range: infinite;
+}
+
+::placeholder{
+    color: #0009;
+}
