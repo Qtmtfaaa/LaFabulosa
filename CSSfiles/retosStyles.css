@@ -17,7 +17,23 @@ h1{
     text-align: center;
     color: #04aacf;
     text-decoration:wavy underline #04aacf;
-    font-size: 55px;
+    font-size: 70px;
+}
+
+h2{
+    padding: 0%;
+    box-sizing: border-box;
+    border: #000a solid 3px;
+    font-size: 40px;
+}
+
+p{
+    font-size: 30px;
+}
+
+a{
+    font-style: italic;
+    color: #8efbf5e0;
 }
 
 .form_retos{
@@ -33,10 +49,12 @@ h1{
 }
 
 .retos_input{
+    padding-left: 5px;
+    font-size: 30px;
     background-color: #04aacf77;
-    margin-top: 5%;
-    height: 25px;
-    width: 40%;
+    margin-top: 0;
+    height: 40px;
+    width: 70%;
 }
 
 .slider_txt{
@@ -44,43 +62,36 @@ h1{
     margin: 20px 0 0 0;
     letter-spacing: 3px;
     font-family: "Eater", "Decide_Remain";
-    font-size: small;
-}
-
-.text_over_form{
-    padding: 0%;
-    box-sizing: border-box;
-    border: #000a solid 3px;
-    font-size: xx-large;
+    font-size: 25px;
 }
 
 .divisor{
-    height: 5px;
+    height: 10px;
     width: 100%;
     background-color: #04aacf;
+    border-radius: 5px;
     margin: 30px auto;
 }
 
 #input_submit{
-    width: 70px;
-    margin-left: 77.5%;
-    margin-top: 20px;
+    width: 175px;
+    height: 40px;
+    margin-left: 62%;
+    font-size: 30px;
     letter-spacing: 2.5px;
 }
 
 #retos_descripción{
     width: 90%;
-    height: 30px;
+    height: 40px;
 }
 
 #retos_slider{
     margin-top: 0;
     width: 95%;
-    range: infinite;
 }
 
 ::placeholder{
-    padding-left: 7.5px;
     color: #0009;
-    font-size: large;
+    font-size: 30px;
 }
