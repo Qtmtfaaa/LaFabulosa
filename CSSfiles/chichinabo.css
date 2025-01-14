@@ -9,15 +9,17 @@
 }
 
 body{
-    margin: 0;
-    background: linear-gradient(#103454,#3a76ae);
+    margin: auto;
+    max-width: 820px;
+    background: #3a76ae no-repeat;
     font-size: 16px;
     font-family: sans-serif;
+    height: 100vh;
 }
 
 h1{
     padding-top: 40px;
-    margin: 0;
+    margin: 0 0 60px 0;
     text-align: center;
     color: #40aff4;
     text-decoration:wavy underline;
@@ -34,18 +36,18 @@ h2{
     border-radius: 25px;
     font-size: 1.5em;
     background-color: #40aff4;
-    max-width: 820px;
+    max-width: 90%;
 }
 
 p{
-    margin: 30px 7vw;
-    font-size: 1em;
+    margin: 20px 10px;
+    font-size: 1.23em;
+    color: #95d9f6;
 }
 
 a{
     font-style: italic;
     color: #40aff4;
-    cursor: url(../Images/Gorda_Negra.png), auto;
 }
 
 textarea{
@@ -67,6 +69,7 @@ label{
 
 .form_div{
     margin: 5px auto 0 auto;
+    color: #000;
 }
 
 .form_retos{
@@ -76,7 +79,7 @@ label{
     border-radius: 10px;
     margin: auto;
     box-shadow: 0 20px 30px 10px #0009 ;
-    max-width: 730px;
+    max-width: 90%;
 }
 
 .retos_input, textarea{
@@ -93,7 +96,6 @@ label{
 .divisor{
     box-sizing: border-box;
     height: 7px;
-    width: 90%;
     background-color: #40aff4;
     border-radius: 2.25px;
     margin: 0 auto 25px auto;
@@ -107,6 +109,39 @@ label{
     width: 95%;
     cursor: grab;
     margin: 0;
+}
+
+.standar_p{
+    border: #000 solid 3px;
+    margin: 20px auto;
+    max-width: 80%;
+    text-align: center;
+    background: #0003;
+}
+
+.titubeo{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.lisiado{
+    border: #fffb dashed 4px;
+}
+
+.barrio_principe{
+    background: #f3f8;
+    color: rgb(64, 237, 90);
+    border: rgb(16, 194, 43) dotted 5px ;
+    font-size: 35px;
+}
+
+.retos_link{
+    color: #f3f8;
+    background: #000a;
+}
+
+.retotes_p{
+    text-align: center;
 }
 
 #input_submit{
