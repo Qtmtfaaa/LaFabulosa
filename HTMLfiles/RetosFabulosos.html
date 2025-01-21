@@ -6,23 +6,30 @@
         <meta name="descripcion" content="En esta página web se puede ver una lista de retos propuestos por la comunidad y tambien se pueden proponer nuevos retos rellenando un formulario">
         <meta name="keywords" content="Fabur,cocida,fabulosa,fabulosadas,san isidoro,silvio perez muñoz, david pleguezuelo perez">
         <meta name="author" content="Silvio Pérez Muñoz">
-        <meta name="OG:TITLE" content="Fabulosadas">
-        <meta name="OG:IMAGE" content="https://img.asmedia.epimg.net/resizer/v2/KVPS2IKGSRMC5B5J3MXGFJL3WI.jpg?auth=ce25d60e9a08f741dc9debf5b70122d4c221b5d030a2a3b813608d8c6dc58a3f&width=360&height=203&smart=true">
-        <meta name="OG:DESCRIPTION" content="Ven a ver las cosas más fabulosas">
-        <meta name="OG:TYPE" content="website">
+        <meta property="og:title" content="Fabulosadas">
+        <meta property="og:image" content="https://img.asmedia.epimg.net/resizer/v2/KVPS2IKGSRMC5B5J3MXGFJL3WI.jpg?auth=ce25d60e9a08f741dc9debf5b70122d4c221b5d030a2a3b813608d8c6dc58a3f&width=360&height=203&smart=true">
+        <meta property="og:description" content="Ven a ver las cosas más fabulosas">
+        <meta property="og:type" content="website">
         <title>RETOS FABULOSOS</title>
         <link rel="icon" href="../Images/Gorda_Negra.png" type="image/png">
         <link rel="stylesheet" href="../CSSfiles/chichinabo.css">
     </head>
+    <?php
+    $servidor = "localhost:3306";
+    $usuario = "root";
+    $clave = "";
+    $baseDeDatos = "Retos_Form";
+    $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
+    ?>
     <body>
         <header>
             <h2 class="only">ZONA NAVEGATIVA</h2>
             <div class="panel">
                 <nav class="nav">
-                    <ul class="nav_list"><a class="button"href="../index.html">COBIJO</a></ul>
-                    <ul class="nav_list"><a class="button"href="RetosFabulosos.html">RETOS</a></ul>
-                    <ul class="nav_list"><a class="button"href="">REVISTA</a></ul>
-                    <ul class="nav_list"><a class="button"href="">FABULOSADAS</a></ul>
+                    <ul class="nav_list"><a class="button" href="../index.html">COBIJO</a></ul>
+                    <ul class="nav_list"><a class="button" href="RetosFabulosos.html">RETOS</a></ul>
+                    <ul class="nav_list"><a class="button" href="">REVISTA</a></ul>
+                    <ul class="nav_list"><a class="button" href="">FABULOSADAS</a></ul>
                 </nav>
             </div>
         </header>
@@ -33,22 +40,33 @@
             <h2>FORMULARIO PARA PROPUESTA DE RETO</h2>
             <form class="form_retos">
                 <div class="input_div">
-                    <input type="text" name="Name" placeholder="Nombre y apellido" required class="retos_input">
+                    <input type="text" name="Name" placeholder="Nombre" required class="retos_input">
                 </div>
                 <div class="input_div">
-                    <input type="email" name="Gmail"placeholder="tugmail@ejemplo.com" required class="retos_input">
+                    <input type="email" name="Gmail" placeholder="tugmail@ejemplo.com" required class="retos_input">
                 </div>
                 <div class="input_div">
-                    <textarea name="Describe tu reto"placeholder="Describe tu reto"></textarea>
+                    <textarea name="Describe_tu_reto" placeholder="Describe tu reto"></textarea>
                 </div>
                 <div class="input_div">
                     <label>Dificultad de tu reto</label>
-                        <input type="range" min="1" max="10"class="retos_input drag_bar" value="1" required>
+                        <input type="range" name="difficulty" min="1" max="10" class="retos_input drag_bar" value="1" required>
                 </div>
                 <div class="input_div">
-                    <input type="submit" class="retos_input"id="input_submit" value="ENVIAR">
+                    <input type="submit" name="send" class="retos_input" id="input_submit" value="ENVIAR">
                 </div>
             </form>
         </div>
     </body>
+    <?php
+        if(isset($_POST['send'])){
+            $name = $_POST['Name'];
+            $email = $_POST['Gmail'];
+            $description = $_POST['Describe_tu_reto'];
+            $difficulty = $_POST['difficulty'];
+            $date = date(DATE_RFC2822);
+            $insertDates = "INSERT INTO Form_Retos (id, name, email, description, difficulty, date) VALUES ('', '$name', '$email', '$description', '$difficulty', '$date')";
+            $ejecutarInsertar = mysqli_query ($enlace, $insertDates);
+        }
+    ?>
 </html> 
