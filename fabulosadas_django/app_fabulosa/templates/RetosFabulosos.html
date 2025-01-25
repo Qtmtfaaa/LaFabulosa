@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="descripcion" content="En esta página web se puede ver una lista de retos propuestos por la comunidad y tambien se pueden proponer nuevos retos rellenando un formulario">
+        <meta name="keywords" content="Fabur,cocida,fabulosa,fabulosadas,san isidoro,silvio perez muñoz, david pleguezuelo perez">
+        <meta name="author" content="Silvio Pérez Muñoz">
+        <meta property="og:title" content="Fabulosadas">
+        <meta property="og:image" content="https://img.asmedia.epimg.net/resizer/v2/KVPS2IKGSRMC5B5J3MXGFJL3WI.jpg?auth=ce25d60e9a08f741dc9debf5b70122d4c221b5d030a2a3b813608d8c6dc58a3f&width=360&height=203&smart=true">
+        <meta property="og:description" content="Ven a ver las cosas más fabulosas">
+        <meta property="og:type" content="website">
+        <title>RETOS FABULOSOS</title>
+        <link rel="icon" href="{% static "Images/Gorda_Negra.png" %}" type="image/png">
+        <link rel="stylesheet" href="{% static "CSSfiles/chichinabo.css" %}">
+    </head>
+    <body>
+        <header>
+            <h2 class="only">ZONA NAVEGATIVA</h2>
+            <nav class="panel">
+                <ul class="nav">
+                    <li class="nav_list"><a href="{% url "index" %}" class="button">COBIJO</a></li>
+                    <li class="nav_list"><a class="button" href="{% url "RetosFabulosos" %}">RETOS</a></li>
+                    <li class="nav_list"><a class="button" href="">REVISTA</a></li>
+                    <li class="nav_list"><a class="button"  href="">FABULOSADAS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>RETOS FABULOSOS</h1>
+        <div class="content_center"><p><a href="../index.html">PRINCIPAL</a></p></div>
+        <div class="divisor"></div>
+        <div class="form_div">
+            <h2>FORMULARIO PARA PROPUESTA DE RETO</h2>
+            <form class="form_retos" method="POST">
+                {% csrf_token %}
+                <div class="input_div">
+                    <input type="text" name="username" placeholder="Nombre" required class="retos_input">
+                </div>
+                <div class="input_div">
+                    <input type="email" name="gmail" placeholder="tugmail@ejemplo.com" required class="retos_input">
+                </div>
+                <div class="input_div">
+                    <label for="reto_name">Nombre del reto</label>
+                    <input type="text" name="reto_name" required class="retos_input">
+                </div>
+                <div class="input_div">
+                    <textarea name="description" placeholder="Describe tu reto"></textarea>
+                </div>
+                <div class="input_div">
+                    <label for="difficulty">Dificultad de tu reto</label>
+                        <input type="range" name="difficulty" min="1" max="10" class="retos_input drag_bar" value="1" required>
+                </div>
+                <div class="input_div">
+                    <input type="submit" name="send" class="retos_input" id="input_submit" value="ENVIAR">
+                </div>
+            </form>
+            <div class="divisor"></div>
+            {% for reto in retos %}
+            
+            {% endfor %}
+        </div>
+    </body>
+</html> 
